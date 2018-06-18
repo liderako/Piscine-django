@@ -1,0 +1,106 @@
+Collecting git+https://github.com/jaraco/path.py.git
+  Cloning https://github.com/jaraco/path.py.git to /private/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-2p8ds9kq-build
+  Running command git clone -q https://github.com/jaraco/path.py.git /private/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-2p8ds9kq-build
+  Running setup.py (path:/private/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-2p8ds9kq-build/setup.py) egg_info for package from git+https://github.com/jaraco/path.py.git
+    Running command python setup.py egg_info
+    running egg_info
+    creating pip-egg-info/path.py.egg-info
+    writing pip-egg-info/path.py.egg-info/PKG-INFO
+    writing dependency_links to pip-egg-info/path.py.egg-info/dependency_links.txt
+    writing requirements to pip-egg-info/path.py.egg-info/requires.txt
+    writing top-level names to pip-egg-info/path.py.egg-info/top_level.txt
+    writing manifest file 'pip-egg-info/path.py.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'pip-egg-info/path.py.egg-info/SOURCES.txt'
+  Source in /private/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-2p8ds9kq-build has version 11.0.2.dev6+gfdc0f18, which satisfies requirement path.py==11.0.2.dev6+gfdc0f18 from git+https://github.com/jaraco/path.py.git
+Installing collected packages: path.py
+    Running command /Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6 -u -c "import setuptools, tokenize;__file__='/private/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-2p8ds9kq-build/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" install --record /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-1nbrpg7m-record/install-record.txt --single-version-externally-managed --compile --home=/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp480jm3_b
+    running install
+    running build
+    running build_py
+    creating build
+    creating build/lib
+    copying path.py -> build/lib
+    copying test_path.py -> build/lib
+    running install_lib
+    creating /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp480jm3_b/lib
+    creating /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp480jm3_b/lib/python
+    copying build/lib/path.py -> /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp480jm3_b/lib/python
+    copying build/lib/test_path.py -> /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp480jm3_b/lib/python
+    byte-compiling /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp480jm3_b/lib/python/path.py to path.cpython-36.pyc
+    byte-compiling /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp480jm3_b/lib/python/test_path.py to test_path.cpython-36.pyc
+    running install_egg_info
+    running egg_info
+    creating path.py.egg-info
+    writing path.py.egg-info/PKG-INFO
+    writing dependency_links to path.py.egg-info/dependency_links.txt
+    writing requirements to path.py.egg-info/requires.txt
+    writing top-level names to path.py.egg-info/top_level.txt
+    writing manifest file 'path.py.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'path.py.egg-info/SOURCES.txt'
+    Copying path.py.egg-info to /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp480jm3_b/lib/python/path.py-11.0.2.dev6+gfdc0f18-py3.6.egg-info
+    running install_scripts
+    writing list of installed files to '/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-1nbrpg7m-record/install-record.txt'
+  Removing source in /private/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-2p8ds9kq-build
+Successfully installed path.py-11.0.2.dev6+gfdc0f18
+Cleaning up...
+You are using pip version 9.0.1, however version 10.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Collecting git+https://github.com/jaraco/path.py.git
+  Cloning https://github.com/jaraco/path.py.git to /private/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-hacpzjuv-build
+  Running command git clone -q https://github.com/jaraco/path.py.git /private/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-hacpzjuv-build
+  Running setup.py (path:/private/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-hacpzjuv-build/setup.py) egg_info for package from git+https://github.com/jaraco/path.py.git
+    Running command python setup.py egg_info
+    running egg_info
+    creating pip-egg-info/path.py.egg-info
+    writing pip-egg-info/path.py.egg-info/PKG-INFO
+    writing dependency_links to pip-egg-info/path.py.egg-info/dependency_links.txt
+    writing requirements to pip-egg-info/path.py.egg-info/requires.txt
+    writing top-level names to pip-egg-info/path.py.egg-info/top_level.txt
+    writing manifest file 'pip-egg-info/path.py.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'pip-egg-info/path.py.egg-info/SOURCES.txt'
+  Source in /private/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-hacpzjuv-build has version 11.0.2.dev6+gfdc0f18, which satisfies requirement path.py==11.0.2.dev6+gfdc0f18 from git+https://github.com/jaraco/path.py.git
+Installing collected packages: path.py
+    Running command /Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6 -u -c "import setuptools, tokenize;__file__='/private/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-hacpzjuv-build/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" install --record /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-89vlfqkc-record/install-record.txt --single-version-externally-managed --compile --home=/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp0pltz3w9
+    running install
+    running build
+    running build_py
+    creating build
+    creating build/lib
+    copying path.py -> build/lib
+    copying test_path.py -> build/lib
+    running install_lib
+    creating /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp0pltz3w9/lib
+    creating /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp0pltz3w9/lib/python
+    copying build/lib/path.py -> /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp0pltz3w9/lib/python
+    copying build/lib/test_path.py -> /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp0pltz3w9/lib/python
+    byte-compiling /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp0pltz3w9/lib/python/path.py to path.cpython-36.pyc
+    byte-compiling /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp0pltz3w9/lib/python/test_path.py to test_path.cpython-36.pyc
+    running install_egg_info
+    running egg_info
+    creating path.py.egg-info
+    writing path.py.egg-info/PKG-INFO
+    writing dependency_links to path.py.egg-info/dependency_links.txt
+    writing requirements to path.py.egg-info/requires.txt
+    writing top-level names to path.py.egg-info/top_level.txt
+    writing manifest file 'path.py.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+
+    reading manifest template 'MANIFEST.in'
+    writing manifest file 'path.py.egg-info/SOURCES.txt'
+    Copying path.py.egg-info to /var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/tmp0pltz3w9/lib/python/path.py-11.0.2.dev6+gfdc0f18-py3.6.egg-info
+    running install_scripts
+    writing list of installed files to '/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-89vlfqkc-record/install-record.txt'
+  Removing source in /private/var/folders/zz/zyxvpxvq6csfxvn_n0000jw00004g0/T/pip-hacpzjuv-build
+Successfully installed path.py-11.0.2.dev6+gfdc0f18
+Cleaning up...
+You are using pip version 9.0.1, however version 10.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
