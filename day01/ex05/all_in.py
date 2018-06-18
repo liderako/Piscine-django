@@ -13,24 +13,6 @@ def     deleteSpace(argv):
         i += 1
     return (result)
 
-def     convert(listS):
-    result = listS
-    i = 0
-    for x in result:
-        result[i] = x.capitalize()
-        tmp = result[i].split(" ")
-        if (len(tmp) == 2):
-            tmp[1] = tmp[1].capitalize()
-            result[i] = tmp[0] + " " + tmp[1]
-        i += 1
-    for x in result:
-        try:
-            result.remove('')
-        except:
-            pass
-    return (result)
-
-
 def     searchDict(tmpDict, s):
     for x in tmpDict:
         res = tmpDict.get(x)
@@ -56,14 +38,24 @@ def run(argv):
     "NJ": "Trenton",
     "CO": "Denver"}
     result = deleteSpace(argv)
-    result = convert(result)
-    if (result[0] == "" and len(result) == 1):
-        return 
+    if ((len(result) == 0) or (len(result) == 1 and result[0] == "")):
+        return
+    i = 0
     for x in result:
+        if (x == ''):
+            continue 
+        xOld = x
+        tmpS = x.capitalize()
+        tmp = tmpS.split(" ")
+        if (len(tmp) == 2):
+            tmp[1] = tmp[1].capitalize()
+            x = tmp[0] + " " + tmp[1]
+        else:
+            x = tmpS
         resState = searchDict(capital_cities, x)
         resCapital = states.get(x)
         if (resState == -1 and resCapital == None):
-            print(x, "is neither a capital city nor a state")
+            print(xOld, "is neither a capital city nor a state")
         elif (resState != -1):
             printS(x, searchDict(states, resState))
         else:
