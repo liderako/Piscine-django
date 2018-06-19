@@ -6,7 +6,7 @@ def read():
 def run():
 	reabBuffer = read()
 	for x in reabBuffer:
-		print (x)
+		print (x.replace("\n", ""))
 
 if __name__ == '__main__':
     run()
