@@ -1,14 +1,16 @@
 from local_lib.path import Path
 
-def 	testMain():
+def 	run():
 	path = Path("local_lib/")
-	# p = path.abspath()
-	# path.module = p
-	print (path.module)
-	# dir_name = path.dirname("test")
-	# print (dir_name)
-	# path.mkdir(mode=511)
-	# print ()
+	if (path.dirs("folder")) == []:
+		newdir = path + "folder" + "/"
+		newdir.mkdir()
+	else:
+		newdir = path + "folder" + "/"
+	newfile = newdir + "my_file"
+	newfile.touch()
+	newfile.write_text("Hello world! Text writed!")
+	print (newfile.text())
 
 if __name__ == '__main__':
-    testMain()
+    run()
