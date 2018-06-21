@@ -24,7 +24,7 @@ def run():
 	l = sorted(d.items(), key=lambda t: t[0])
 	l = sorted(l, key=lambda t: t[1])
 	for x in l:
-		print (x[0], ":", x[1])
+		print (x[0])
 
 if __name__ == '__main__':
     run()
