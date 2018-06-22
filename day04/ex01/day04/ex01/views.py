@@ -10,4 +10,4 @@ def 	affichage(request):
 
 
 def 	templates(request):
-	return render(request, "ex01/template.html")
+	return render(request, "ex01/templates.html")

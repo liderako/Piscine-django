@@ -4,5 +4,5 @@ from . import views
 urlpatterns = [
     url(r'^django$', views.django),
     url(r'^affichage$', views.affichage),
-    url(r'^templates$', views.templates),
+    url(r'^templates$', views.templates)
 ]
