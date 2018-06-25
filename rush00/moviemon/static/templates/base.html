@@ -1,0 +1,50 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Game</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+	<h1>Moviemon</h1>
+	
+	{% block content %}
+		<img src="{% static 'screen.png' %}">
+	{% endblock %}
+
+	{% block button %}
+	<p>
+		<p>
+			<a {% if buttons.start.link %} href="{{ buttons.start.link }}" {% else %} href="?button=start" {% endif %} type="GET" class="button">Start</a> {{ buttons.start.text }}
+		</p>
+		<p>
+			<a {% if buttons.select.link %} href="{{ buttons.select.link }}" {% else %} href="?button=select" {% endif %} type="GET" class=button>Select</a> {{ buttons.select.text }}
+		</p>
+		<div>
+			<p>
+				<a {% if buttons.a.link %} href="{{ buttons.a.link }}" {% else %} href="?button=A" {% endif %} type="GET" class="button">A</a> {{ buttons.a.text }}
+			</p>
+			<p>
+				<a  {% if buttons.b.link %} href="{{ buttons.b.link }}" {% else %} href="?button=B" {% endif %} type="GET" class=button>B</a> {{ buttons.b.text }}
+			</p>
+			<div class="arrow-keys">
+				<p class="up">
+					<a href="?button=up" type="GET" class="button up">UP</a> {{ buttons.up.text }}
+				</p>
+				<p>
+					<a href="?button=left" type="GET" class=button>Left</a> {{ buttons.left.text }}
+				</p>
+				<p>
+					<a href="?button=down" type="GET" class=button>Down</a> {{ buttons.down.text }}
+				</p>
+				<p>
+					<a href="?button=right" type="GET" class=button>Right</a> {{ buttons.right.text }}
+				</p>
+			</div>
+		</div>
+	</p>
+	{% endblock %}
+
+</body>
+</html>
