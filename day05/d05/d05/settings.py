@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ex00',
     'ex01',
+    'ex02',
 ]
 
 MIDDLEWARE = [
@@ -70,17 +71,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'd05.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
 DATABASES = {
     'default': {
