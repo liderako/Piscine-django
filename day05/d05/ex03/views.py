@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Movies
-import psycopg2
 
-def populate(requests):
+def populate(req):
     print("DSAASDAS_________________________________________")
 
     l = [
