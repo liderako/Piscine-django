@@ -1,41 +1,44 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import removeForm
+from .forms import *
 import psycopg2
 
 def init(req):
-    conn = psycopg2.connect(
-        database="day05",
-        host='localhost',
-        user="asvirido",
-        password='secret'
-        )
-    curr = conn.cursor()
+    try:
+        conn = psycopg2.connect(
+            database="day05",
+            host='localhost',
+            user="asvirido",
+            password='secret'
+            )
+        curr = conn.cursor()
 
-    curr.execute(""" CREATE TABLE IF NOT EXISTS ex06_movies (
-    	title varchar(64) UNIQUE NOT NULL,
-    	episode_nb  integer PRIMARY KEY,
-    	opening_crawl text,
-    	director varchar(32) NOT NULL,
-    	producer varchar(128) NOT NULL,
-    	release_date date NOT NULL,
-    	created timestamp DEFAULT(now()),
-    	updated timestamp DEFAULT(now())
-    	);
-    	CREATE OR REPLACE FUNCTION update_changetimestamp_column()
-    	RETURNS TRIGGER AS $$
-    	BEGIN
-    	NEW.updated = now();
-    	NEW.created = OLD.created;
-    	RETURN NEW;
-    	END;
-    	$$ language 'plpgsql';
-    	CREATE TRIGGER update_films_changetimestamp BEFORE UPDATE
-    	ON ex06_movies FOR EACH ROW EXECUTE PROCEDURE
-    	update_changetimestamp_column();
-    	""")
-    conn.commit()
-    conn.close()
+        curr.execute(""" CREATE TABLE IF NOT EXISTS ex06_movies (
+            title varchar(64) UNIQUE NOT NULL,
+            episode_nb  integer PRIMARY KEY,
+            opening_crawl text,
+            director varchar(32) NOT NULL,
+            producer varchar(128) NOT NULL,
+            release_date date NOT NULL,
+            created timestamp DEFAULT(now()),
+            updated timestamp DEFAULT(now())
+            );
+            CREATE OR REPLACE FUNCTION update_changetimestamp_column()
+            RETURNS TRIGGER AS $$
+            BEGIN
+            NEW.updated = now();
+            NEW.created = OLD.created;
+            RETURN NEW;
+            END;
+            $$ language 'plpgsql';
+            CREATE TRIGGER update_films_changetimestamp BEFORE UPDATE
+            ON ex06_movies FOR EACH ROW EXECUTE PROCEDURE
+            update_changetimestamp_column();
+            """)
+        conn.commit()
+        conn.close()
+    except psycopg2.Error as e:
+        return (HttpResponse(str(e.pgerror)))
     return (HttpResponse("Ok"))
 
 def     withForm(request):
