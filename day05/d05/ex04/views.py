@@ -43,7 +43,7 @@ def display(requests):
         for x in row:
             l.append(x)
         conn.close()
-        return render(requests, "display.html", {'data': l})
+        return render(requests, "ex04/display.html", {'data': l})
     except:
         return  (HttpResponse("No data available"))
 
@@ -97,7 +97,7 @@ def remove(req):
         conn.close()
     except:
          return  (HttpResponse("No data available"))
-    return render(req, "remove.html", {'data': l, 'form' : form})
+    return render(req, "ex04/remove.html", {'data': l, 'form' : form})
 
 def populate(requests):
     conn = psycopg2.connect(

@@ -112,6 +112,6 @@ def display(requests):
         for x in row:
             l.append(x)
         conn.close()
-        return render(requests, "display.html", {'data': l})
+        return render(requests, "ex02/display.html", {'data': l})
     except:
         return  (HttpResponse("No data available"))

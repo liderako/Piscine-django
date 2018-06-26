@@ -1,6 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Movies
+from .forms import *
+
+def     withForm(request):
+    data = ""
+    if (request.method == 'POST'):
+        form = removeForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data['title']
+    else:
+        form = removeForm()
+    return form, data
 
 def populate(req):
     l = [
@@ -38,6 +49,24 @@ def display(requests):
             raise Exception("len < 0")
         for x in res:
             l.append([x.episode_nb, x.title, x.director, x.producer, x.opening_crawl or None, x.release_date])
-        return render(requests, "ex03/display.html", {'data': l})
+        return render(requests, "ex05/display.html", {'data': l})
     except Exception as e:
         return (HttpResponse("No data available"))
+
+def remove(requests):
+    form, data = withForm(requests)
+    res = Movies.objects.all()
+    l = list()
+    id = None
+    for x in res:
+        if (x.title == data):
+            id = x.episode_nb
+            break
+    if (id != None):
+        tmpR = Movies.objects.get(episode_nb=id)
+        tmpR.delete()
+
+    res = Movies.objects.all()
+    for x in res:
+        l.append(x.title)
+    return render(requests, "ex05/remove.html", {'data': l, 'form' : form})
