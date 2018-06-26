@@ -54,19 +54,21 @@ def display(requests):
         return (HttpResponse("No data available"))
 
 def remove(requests):
-    form, data = withForm(requests)
-    res = Movies.objects.all()
-    l = list()
-    id = None
-    for x in res:
-        if (x.title == data):
-            id = x.episode_nb
-            break
-    if (id != None):
-        tmpR = Movies.objects.get(episode_nb=id)
-        tmpR.delete()
-
-    res = Movies.objects.all()
-    for x in res:
-        l.append(x.title)
-    return render(requests, "ex05/remove.html", {'data': l, 'form' : form})
+    try:
+        form, data = withForm(requests)
+        res = Movies.objects.all()
+        l = list()
+        id = None
+        for x in res:
+            if (x.title == data):
+                id = x.episode_nb
+                break
+        if (id != None):
+            tmpR = Movies.objects.get(episode_nb=id)
+            tmpR.delete()
+        res = Movies.objects.all()
+        for x in res:
+            l.append(x.title)
+        return render(requests, "ex05/remove.html", {'data': l, 'form' : form})
+    except:
+        return (HttpResponse("No data available"))

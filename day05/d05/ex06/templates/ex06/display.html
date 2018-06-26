@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+	<table>
+	{% for var in data %}
+		<tr>
+			{% for x in var %}
+			    <td style="border: 1px solid #0f0f0f;">{{ x }}</td>
+			{% endfor %}
+		</tr>
+	{% endfor %}
+	</table>
+</body>
+</html>
+

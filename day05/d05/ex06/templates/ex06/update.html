@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form method="POST" action="/ex06/update/">
+                {% csrf_token %}
+                <select name="title">
+                    {% for x in data %}
+                        <option
+                                name="name" value="{{ x }}">{{ x }}
+                        </option>
+                    {% endfor %}
+                </select>
+                {{form}}
+	            <input  name="form" type="submit" value="Accept">
+            </form>
+    </body>
+</html>
