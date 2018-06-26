@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+	<div>
+	{% for var in data %}
+    <p>
+        <a> Title - {{ var }}</a>
+    </p>
+	{% endfor %}
+	<form method="POST" action="/ex04/remove/">
+	    {% csrf_token %}
+	    {{form}}
+	    <input type="submit" value="Send Message">
+    </form>
+    </div>
+</body>
+</html>
+
