@@ -1,1 +1,0 @@
-python3 -m venv vcub; ./vcub/bin/pip3 install -r requirement.txt; source vcub/bin/activate; sh run.sh

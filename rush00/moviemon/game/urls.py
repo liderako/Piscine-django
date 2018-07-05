@@ -3,7 +3,6 @@ from . import views
 
 urlpatterns = [
     url(r'^worldmap/$', views.worldMap),
-    # url(r'^test/$', views.test),
     url(r'^battle/(?P<moviemon_id>tt[0-9]+)?$', views.battle),
     url(r'^moviedex/$', views.moviedex),
     url(r'^moviedex/(?P<moviemon_id>tt[0-9]+)/?$', views.detail),
